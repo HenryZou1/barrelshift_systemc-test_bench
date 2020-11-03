@@ -1,0 +1,77 @@
+$date
+     Jan 20, 2020       10:58:17
+$end
+
+$version
+              SystemC 2.3.0-ASI --- Sep 10 2012 16:44:06
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire    1  aaa  clk       $end
+$var wire    8  aab  a [7:0]  $end
+$var wire    8  aac  b [7:0]  $end
+$var wire    8  aad  shiftout [7:0]  $end
+$var wire    1  aae  enable       $end
+$var wire    1  aaf  direction       $end
+$var wire    1  aag  operation       $end
+$var wire    3  aah  shift [2:0]  $end
+$var wire    8  aai  data_out [7:0]  $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+1aaa
+b101 aab
+b11 aac
+b11 aad
+0aae
+0aaf
+0aag
+b1 aah
+b0 aai
+$end
+
+#5
+0aaa
+b10 aai
+
+#10
+1aaa
+1aag
+
+#15
+0aaa
+b1000 aai
+
+#20
+1aaa
+b110 aad
+1aae
+
+#25
+0aaa
+b1011 aai
+
+#30
+1aaa
+b1 aad
+1aaf
+
+#35
+0aaa
+b110 aai
+
+#40
+1aaa
+
+#45
+0aaa
+

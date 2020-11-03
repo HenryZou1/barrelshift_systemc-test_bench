@@ -1,0 +1,34 @@
+// COE838 - Lab1 SystemC Intro
+// BarrelShift Unit Tutorial. 
+//////////////////////////////////
+#include "barrelshift.h"
+
+void barrel :: barrel_method(){
+	sc_int<8> data;
+	sc_int <8> shift;
+	int i,x ;
+
+	if(enable.read() == 1){
+		data = din.read();
+		if(left_right.read() == 0){ //shift left
+			cout << "[left]  Data = " << data.to_string(SC_BIN) << endl;
+		 	data = din.read();
+			for(i = 7; i > 0; i--)
+				data[i] = din.read()[i-shift];
+			data[0] = din.read();
+			dout.write(data);
+ 
+		}else if(left_right.read() == 1){
+		cout << "[right] Data = " << data.to_string(SC_BIN) << endl; 
+		
+			
+			
+			data[7] = r_in.read();
+			dout.write(data);
+		}
+	}
+	else 
+		cout << "Not enabled "<<endl;
+}
+
+

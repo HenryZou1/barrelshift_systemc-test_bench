@@ -1,0 +1,17 @@
+// COE838 - Lab1 SystemC Intro
+// BarrelShift Unit Tutorial. 
+//////////////////////////////////
+//Testbench driver for barrelshift
+
+#include <systemc.h>
+#include "barrelshift.h"
+#include "alu.h"
+
+
+int sc_main(int argc, char* argv[]){
+	sc_signal <>
+	//make_barrel(); //example of function call in main cpu
+
+
+	return 0;                         
+}
